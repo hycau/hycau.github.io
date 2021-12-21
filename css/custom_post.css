@@ -1,0 +1,37 @@
+.card{
+    background-color: #BB8082;
+  }
+
+  /* post css */
+.myPost{
+    /* background-color:#DF7861; */
+    margin: 0;
+}
+
+.myPostTitle{
+    font-family:Arial;
+    background-color:#F39189;
+    max-width: 75%;
+}
+.myPostText {
+    background-color:#046582;
+    font-family:Arial;
+    font-size:25px;
+    color:#F39189;
+    text-align: left;
+    padding:11px 27px;
+    /* text-decoration:none; */
+    /* text-shadow:0px 1px 0px #ECE2E1; */
+    word-wrap: break-word;
+    max-width: 75%;
+}
+
+/* the code block */
+pre{
+    font-size:20px;
+    background-color:#6E7582;
+    max-width: 1010px;
+}
+h1,h2,h3{
+    text-align: center;
+}

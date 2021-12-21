@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background: url("/index_pic/planet.jpg") no-repeat center center fixed; 
+            margin: 0;
+            padding: 0;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+    </style>
+    <!-- Blog Header: link css/js -->
+    <!-- <h1 id="logo">BLOG</h1> -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Bootstrap core CSS -->
+    
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/custom_post.css">
+
+    <!-- Bootstrap core JS -->
+    
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- icon -->
+    <!-- <link rel="icon" href="favicon/favicon.ico"> -->
+
+    <!-- Custom styles for this template -->
+    <style>
+      header
+      {
+          background-color:#BB8082;
+          margin: 0;
+          padding: 0;
+      }
+      </style>
+    <!-- 
+<link rel="stylesheet" href="/css/blog.css">
+-->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">BLOG</span>
+          <span class="lead blog-description">&nbsp;&nbsp;&nbsp;Life is Good</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="/archives" class="nav-link">Archives</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </header>
+          
+
+<meta name="generator" content="Hexo 5.4.0"></head> 
+    <!-- Click show text -->
+    <script type="text/javascript" src="/js/show_text.js"></script>
+</head>
+<body>
+    <!-- Main Content -->
+    <center><div class="myPost">
+    <div class="myPostTitle">
+        <h2 class="blog-post-title">Create Theme From Scratch</h2>
+        <p class="blog-post-meta">2021-12-21</p>
+    </div>
+    <div class="myPostText"><h2 id="Note-I-have-little-experience-on-web-develop-This-is-my-Fisrt-Blog"><a href="#Note-I-have-little-experience-on-web-develop-This-is-my-Fisrt-Blog" class="headerlink" title="Note: I have little experience on web develop. This is my Fisrt Blog"></a>Note: I have little experience on web develop. This is my Fisrt Blog</h2><h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><p>Just follow the instruction <a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo installation</a><br>Git + Node.js (Don’t know what’s this, I just go ahead and start npm)</p>
+<h1 id="Start-server-amp-First-blog"><a href="#Start-server-amp-First-blog" class="headerlink" title="Start server &amp; First blog"></a>Start server &amp; First blog</h1><p>Quiet simple (feeling confident)</p>
+<h1 id="Design-my-own-blog-theme"><a href="#Design-my-own-blog-theme" class="headerlink" title="Design my own blog theme"></a>Design my own blog theme</h1><p>Summarized into 3 categories:<br>&nbsp;&nbsp;&nbsp;&nbsp;programming: record my code experience<br>&nbsp;&nbsp;&nbsp;&nbsp;projects: display something cool<br>&nbsp;&nbsp;&nbsp;&nbsp;notes: words not irrelevant with coding<br><br><br>So I want to click the category card and get all the posts under this catrgory.<br>It’s the main goal.</p>
+<h1 id="Try-to-make-it"><a href="#Try-to-make-it" class="headerlink" title="Try to make it"></a>Try to make it</h1><h2 id="layout-ejs"><a href="#layout-ejs" class="headerlink" title="layout.ejs"></a>layout.ejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;!-- Blog Header: link css/js --&gt;</span><br><span class="line">    &lt;%- partial(&#x27;_partial/header&#x27;) %&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!-- Main Content --&gt;</span><br><span class="line">    &lt;%- body %&gt; </span><br><span class="line">      </span><br><span class="line">    &lt;%- partial(&#x27;_partial/footer&#x27;) %&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="header-ejs"><a href="#header-ejs" class="headerlink" title="header.ejs"></a>header.ejs</h2><p>Use bootstrap5 to decorate<br>Bootstrap should be placed in source folder.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- css(&#x27;bootstrap/css/bootstrap.min.css&#x27;) %&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="index-ejs"><a href="#index-ejs" class="headerlink" title="index.ejs"></a>index.ejs</h2><p>Click the card button and get all the posts under this category<br>Don’t know why “/categories/programming/“ will automatically lead to classified posts in “programming” category, but it works.<br>In fact I can’t find the “categories” folder, guess it’s hexo magic.<br>Note that src actually load the “source” folder, so image folder should be placed at the same level with “_post”.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;card&quot; style=&quot;width: 18rem;&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;/index_pic/programming.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;...&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;card-body&quot;&gt;</span><br><span class="line">          &lt;h5 class=&quot;card-title&quot;&gt;Some recording&lt;/h5&gt;</span><br><span class="line">          &lt;p class=&quot;card-text&quot;&gt;</span><br><span class="line">              Count: &lt;%- site.categories.find(&#123;name:&quot;programming&quot;&#125;)[&quot;data&quot;][0][&quot;length&quot;] %&gt;</span><br><span class="line">          &lt;/p&gt;</span><br><span class="line">          &lt;a href=&quot;/categories/programming/&quot; class=&quot;btn btn-primary stretched-link&quot;&gt;Programming Go!&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="archive-ejs"><a href="#archive-ejs" class="headerlink" title="archive.ejs"></a>archive.ejs</h2><p>Click the button raises archive.ejs</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&#x27;row&#x27;&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;% page.posts.each(function(post)&#123; %&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;h3&gt;&lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;&lt;%= post.title %&gt;&lt;/a&gt;&lt;/h3&gt;</span><br><span class="line">        &lt;div class=&#x27;text-muted&#x27;&gt;</span><br><span class="line">            &lt;%= date(post.date, config.date_format) %&gt; </span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;% &#125;) %&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="post-ejs"><a href="#post-ejs" class="headerlink" title="post.ejs"></a>post.ejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">        &lt;h2 class=&quot;blog-post-title&quot;&gt;&lt;%- page.title %&gt;&lt;/h2&gt;</span><br><span class="line">        &lt;p class=&quot;blog-post-meta&quot;&gt;&lt;%= date(page.date, config.date_format) %&gt;&lt;/p&gt;</span><br><span class="line">        &lt;%- page.content %&gt;</span><br><span class="line">&lt;/center&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Beautify-the-Blog"><a href="#Beautify-the-Blog" class="headerlink" title="Beautify the Blog"></a>Beautify the Blog</h1><p>Now the main function has been applied. However, the plain text looks…boring.<br>This is helpful, it lists all kind of components: <a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.1/examples/cheatsheet/">Bootstrap cheatsheet</a><br>Well, bootstrap is not helpful now.<br>Let’s check others’ blog to find some inspiration.</p>
+<h2 id="Background-image"><a href="#Background-image" class="headerlink" title="Background image"></a>Background image</h2><p>I’d like to change my background image first<br>Add below to the layout.ejs</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        body &#123;</span><br><span class="line">            background: url(&quot;/index_pic/planet.jpg&quot;) no-repeat center center fixed; </span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">            -webkit-background-size: cover;</span><br><span class="line">            -moz-background-size: cover;</span><br><span class="line">            -o-background-size: cover;</span><br><span class="line">            background-size: cover;</span><br><span class="line">            &#125;</span><br><span class="line">    &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Post-color"><a href="#Post-color" class="headerlink" title="Post color"></a>Post color</h2><p>pink+blue are my favorite<br>First spilt the post components into different classes.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;myPost&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;myPostTitle&quot;&gt;</span><br><span class="line">        &lt;h2 class=&quot;blog-post-title&quot;&gt;&lt;%- page.title %&gt;&lt;/h2&gt;</span><br><span class="line">        &lt;p class=&quot;blog-post-meta&quot;&gt;&lt;%= date(page.date, config.date_format) %&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;myPostText&quot;&gt;&lt;%- page.content %&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>Then create css file in the “source/css/“ folder, do not forget to cite it in “_partial/header.ejs”.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Custom CSS --&gt;</span><br><span class="line">    &lt;%- css(&#x27;css/custom_post.css&#x27;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.myPostTitle&#123;</span><br><span class="line">    font-family:Arial;</span><br><span class="line">    background-color:#F39189;</span><br><span class="line">    max-width: 75%;</span><br><span class="line">&#125;</span><br><span class="line">.myPostText &#123;</span><br><span class="line">    background-color:#046582;</span><br><span class="line">    font-family:Arial;</span><br><span class="line">    font-size:25px;</span><br><span class="line">    color:#F39189;</span><br><span class="line">    text-align: left;</span><br><span class="line">    padding:11px 27px;</span><br><span class="line">    word-wrap: break-word;</span><br><span class="line">    max-width: 75%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Header-color"><a href="#Header-color" class="headerlink" title="Header color"></a>Header color</h2><p>To match with my color palettes, I change the bootstrap header color in “_partial/header.ejs”.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">      header</span><br><span class="line">      &#123;</span><br><span class="line">          background-color:#BB8082;</span><br><span class="line">          margin: 0;</span><br><span class="line">          padding: 0;</span><br><span class="line">      &#125;</span><br><span class="line">      &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Code-Block-Color"><a href="#Code-Block-Color" class="headerlink" title="Code Block Color"></a>Code Block Color</h2><p>Right click and check the elements of my post, markdown code is placed in the “pre” tag.<br>Not sure about width, leave it for later.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pre&#123;</span><br><span class="line">    font-size:20px;</span><br><span class="line">    background-color:#6E7582;</span><br><span class="line">    max-width: 1010px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Same method for markdown h1,h2,h3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1,h2,h3&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now that the main function and main color combination have been completed, this post could finally ends.<br>Next post I’ll try to add more function to my blog, such as tag search and timeline.</p>
+</div>
+</div>
+         </center>
+      
+    <style>
+  div{
+    margin: auto;
+    padding: auto;
+  }
+</style>
+
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Thanks for Watching!</h1>
+      <!-- show the running time -->
+      <p class="lead my-3">
+        <span id="timeDate"> Load days ...</span><span id="times"> Loading hours, minutes, seconds ...</span>
+  <script> 
+    var now = new Date(); 
+    function createtime() { 
+         var grt = new Date("12/19/2021 23:24:25"); // Modify your site establishment time here  
+         now.setTime(now.getTime() + 250); days = (now - grt) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum; hnum = Math.floor(hours); 
+         if (String(hnum).length == 1) {hnum = "0" + hnum; } 
+         minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum; mnum = Math.floor(minutes); 
+         if (String(mnum).length == 1) {mnum = "0" + mnum; } 
+         seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum; snum = Math.round(seconds); 
+         if (String(snum).length == 1) {snum = "0" + snum; } 
+         document.getElementById("timeDate").innerHTML = " The Blog is running  " + dnum + "  Day  "; document.getElementById("times").innerHTML = hnum + "  Hours  " + mnum + "  minute  " + snum + "  second "; } setInterval("createtime()", 250); 
+  </script>
+      </p>
+      <p class="lead mb-0"><a href="/" class="text-white fw-bold">Back Home...</a></p>
+    </div>
+  </div>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+ -->
+</body>
+</html>
